@@ -53,12 +53,7 @@ clf.fit(Ftr, ytr)
 
 pred = clf.predict(Fva)
 acc = accuracy_score(yva, pred)
-
-print()
-print('=' * 46)
 print('  SPATIAL VALIDATION ACCURACY: %.4f  (%.2f%%)' % (acc, acc * 100))
-print('=' * 46)
-print()
 
 cm = confusion_matrix(yva, pred)
 rec = cm.diagonal() / cm.sum(1)
